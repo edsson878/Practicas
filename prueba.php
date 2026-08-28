@@ -1,5 +1,28 @@
 <?php
+    
+    header('Content-Type: application/json; charset=utf-8');
 
- header("Content-Type: text/html; charset=UTF-8");
+    $buscar = $_GET['buscar'] ?? '';
 
- echo 'success';
+    $resultados = [
+        [
+            'id' => 1,
+            'nombre' => 'Maria'
+        ],
+        [
+            'id' => 2,
+            'nombre' => 'Juan'
+        ],
+        [
+            'id' => 3,
+            'nombre' => 'Carlos'
+        ],
+        [
+            'id' => 4,
+            'nombre' => 'Ana'
+        ]
+    ];
+
+    echo json_encode(
+        $resultados
+    );

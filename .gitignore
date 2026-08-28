@@ -1,0 +1,33 @@
+# ==========================================
+# SECRETOS Y CREDENCIALES (¡NUNCA SUBIR!)
+# ==========================================
+*.env
+*.env.*
+!*.env.example   # Permite subir una plantilla vacía de ejemplo
+
+# Certificados y claves
+*.pem
+*.key
+*.crt
+*.pfx
+*.p12
+
+# Archivos de credenciales específicos
+credentials.json
+client_secret*.json
+config/secrets.yml
+
+# ==========================================
+# ARCHIVOS DE CONFIGURACIÓN PERSONAL / IDE
+# ==========================================
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.user
+
+# ==========================================
+# ARCHIVOS DEL SISTEMA OPERATIVO
+# ==========================================
+.DS_Store
+Thumbs.db
