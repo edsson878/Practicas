@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!--Para caracteres especiales -->
     <meta charset="UTF-8">
-    <!--Para el escalado de la pagina se adapte al dispositivo en la que se 
-        abre sea celular, tablet o  -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Siempre se carga primero vue  -->
     <script src="/assets/js/vue/vue.min.js"></script>
+    <title>🐱‍🚀</title>
 </head>
 <body>
     <div id="app">
         <input v-model="message">
         <div>{{ message }}</div>
+        <button @click="agregar">Agregar</button>
         <input 
         type = "search"
         placeholder = "Escribe algo"
@@ -58,18 +55,16 @@
             },
             methods:{
                 buscarTexto(){
-                    //aqui van las funciones que se ejecutan al hacer click en el boton
-                    //para accedera todos los elementos de vue se utiliza this
                     alert(this.keyword);
 
                     const xhr = new XMLHttpRequest();
-                    //Concatenar = Unir 2 o mas cadenas de texto
-                    xhr.open('GET', '/prueba.php?buscar='+encodeURIComponent(this.keyword), true);
-                    
+                    xhr.open('GET', '/prueba.php?buscar='+encodeURIComponent(this.keyword), true);  
                     xhr.onreadystatechange = function() {
                         if (xhr.readyState === XMLHttpRequest.DONE) {
                             if (xhr.status === 200) {
-                               // this.message = xhr.responseText;
+                            let respuesta = JSON.parse(xhr.responseText);
+                            JSON.parse(xhr.responseText);
+                            this.resultados.push(...respuesta);
                             } else {
                                 this.message = 'Error: ';
                             }

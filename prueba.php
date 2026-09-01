@@ -11,15 +11,7 @@
         ],
         [
             'id' => 2,
-            'nombre' => 'Juan'
-        ],
-        [
-            'id' => 3,
-            'nombre' => 'Carlos'
-        ],
-        [
-            'id' => 4,
-            'nombre' => 'Ana'
+            'nombre' => 'Ernestina'
         ]
     ];
 
